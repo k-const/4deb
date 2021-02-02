@@ -11,5 +11,5 @@ echo 'deb https://repo.sparkylinux.org/ core main' > /etc/apt/sources.list.d/spa
 wget -O - https://repo.sparkylinux.org/sparky.gpg.key | apt-key add -
 
 # installing desktop environment
-apt update && apt -y install chromium doublecmd-plugins evolution filezilla gpicview guake \
-libsmbclient lxtask mpv nscde-desktop pavucontrol system-config-printer tor vim-gtk3 wine
+apt update && apt -y install chromium doublecmd-plugins evolution gpicview guake libsmbclient lxtask \
+mpv nscde-desktop pavucontrol system-config-printer tor vim-gtk3 wine

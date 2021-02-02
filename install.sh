@@ -2,7 +2,7 @@
 
 # configuring package manager
 echo 'APT::Get::Install-Recommends "false";' > /etc/apt/apt.conf
-echo 'APT::Get::Install-Suggests "false";' > /etc/apt/apt.conf
+echo 'APT::Get::Install-Suggests "false";' >> /etc/apt/apt.conf
 echo 'deb http://deb.debian.org/debian/ stable main contrib non-free' > /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian/ stable-updates main contrib non-free' >> /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian-security stable/updates main' >> /etc/apt/sources.list
@@ -11,4 +11,5 @@ echo 'deb https://repo.sparkylinux.org/ core main' > /etc/apt/sources.list.d/spa
 wget -O - https://repo.sparkylinux.org/sparky.gpg.key | apt-key add -
 
 # installing desktop environment
-apt update && apt -y install nscde-desktop
+apt update && apt -y install chromium doublecmd-plugins evolution filezilla gpicview libsmbclient \
+lxtask mpv nscde-desktop system-config-printer tor vim-gtk3 wine

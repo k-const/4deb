@@ -21,7 +21,7 @@ apt -y install bluez-firmware firmware-amd-graphics firmware-atheros firmware-bn
 firmware-libertas firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek
 echo 'Does your PC have a touchpad? [Y/n]
 read touchpad
-case doing $touchpad in
+case $touchpad in
   Y | y | u | Yes | yes ) apt -y install xserver-xorg-input-synaptics
   ;;
   N | n | No | no ) exit 0

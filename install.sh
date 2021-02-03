@@ -18,8 +18,7 @@ chown $SUDO_USER:$SUDO_USER /home/$USER/.xinitrc
 
 # installing drivers
 apt -y install bluez-firmware firmware-amd-graphics firmware-atheros firmware-bnx2* firmware-iwlwifi \
-firmware-libertas firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek \
-xserver-xorg-input-libinput
+firmware-libertas firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek
 echo 'Does your PC have a touchpad? [Y/n]
 read touchpad
 case doing $touchpad in

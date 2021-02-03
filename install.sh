@@ -17,26 +17,9 @@ echo $'#!/bin/sh \nexec dbus-launch nscde' > /home/$SUDO_USER/.xinitrc
 chown $SUDO_USER:$SUDO_USER /home/$USER/.xinitrc
 
 # installing drivers
-apt -y install bluez-firmware firmware-atheros firmware-bnx2* firmware-iwlwifi firmware-libertas \
-firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek xserver-xorg-input-libinput
-echo 'Please select vendor of your graphics card [1-4] (open-source graphics device driver will be installed)"
-echo "1. AMD/ATI"
-echo "2. NVIDIA"
-echo "3. Intel"
-echo "4. Other (use default vesa driver)"
-read graphics
-case doing $graphics in
-  1 ) apt -y install firmware-amd-graphics xserver-xorg-video-ati
-  ;;
-  2 ) apt -y install xserver-xorg-video-nouveau
-  ;;
-  3 ) apt -y install intel-media-va-driver xserver-xorg-video-intel
-  ;;
-  4 ) apt -y install xserver-xorg-video-vesa
-  ;;
-  * ) exit 0 && echo "Abort."
-  ;;
-esac
+apt -y install bluez-firmware firmware-amd-graphics firmware-atheros firmware-bnx2* firmware-iwlwifi \
+firmware-libertas firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek \
+xserver-xorg-input-libinput
 echo 'Does your PC have a touchpad? [Y/n]
 read touchpad
 case doing $touchpad in

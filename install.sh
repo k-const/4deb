@@ -32,6 +32,6 @@ case doing $graphics in
   ;;
   4 ) apt -y install xserver-xorg-video-vesa
   ;;
-  * ) echo "Abort."
+  * ) exit 0 && echo "Abort."
   ;;
 esac

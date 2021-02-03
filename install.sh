@@ -13,12 +13,14 @@ wget -O - https://repo.sparkylinux.org/sparky.gpg.key | apt-key add -
 # installing desktop environment and some necessary apps
 apt update && apt -y install chromium dbus-x11 doublecmd-gtk doublecmd-plugins libsmbclient \
 nscde-desktop pavucontrol slim system-config-printer tilix tor vim-gtk3 wine xinit
+
 echo $'#!/bin/sh \nexec dbus-launch nscde' > /home/$SUDO_USER/.xinitrc
 chown $SUDO_USER:$SUDO_USER /home/$USER/.xinitrc
 
 # installing drivers
-apt -y install bluez-firmware firmware-amd-graphics firmware-atheros firmware-bnx2* firmware-iwlwifi \
-firmware-libertas firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek
+apt -y install bluez-firmware firmware-atheros firmware-bnx2* firmware-iwlwifi firmware-libertas \
+firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek
+
 echo 'Does your PC have a touchpad? [Y/n]
 read touchpad
 case $touchpad in

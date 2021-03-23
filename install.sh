@@ -19,6 +19,5 @@ nautilus-share nautilus-wipe network-manager-l2tp-gnome network-manager-openconn
 network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-ssh-gnome \
 network-manager-strongswan pavucontrol pwgen qbittorrent qpdfview qpdfview-djvu-plugin \
 qpdfview-ps-plugin qt5-style-plugins rar sipcalc tcpdump thunderbird thunderbird-l10n-ru \
-ttf-mscorefonts-installer ttf-unifont uance unrar unzip vim-gtk3 vlc vlc-plugin-notify \
-vlc-plugin-samba vlc-plugin-video-splitter wireshark-gtk xdg-utils xserver-xorg \
-xserver-xorg-input-libinput xserver-xorg-video-ati xserver-xorg-video-vesa zip
+ttf-mscorefonts-installer ttf-unifont uance unrar unzip vim-gtk3 wireshark-gtk xdg-utils \
+xserver-xorg xserver-xorg-input-libinput xserver-xorg-video-ati xserver-xorg-video-vesa zip

@@ -7,28 +7,18 @@ echo 'deb http://deb.debian.org/debian/ stable main contrib non-free' > /etc/apt
 echo 'deb http://deb.debian.org/debian/ stable-updates main contrib non-free' >> /etc/apt/sources.list
 echo 'deb http://deb.debian.org/debian-security stable/updates main' >> /etc/apt/sources.list
 apt update && apt -y upgrade && apt -y install apt-transport-https curl dirmngr wget
-echo 'deb https://repo.sparkylinux.org/ core main' > /etc/apt/sources.list.d/sparky.list
-wget -O - https://repo.sparkylinux.org/sparky.gpg.key | apt-key add -
 
 # installing desktop environment and some necessary apps
-apt update && apt -y install chromium dbus-x11 doublecmd-gtk doublecmd-plugins libsmbclient \
-nscde-desktop pavucontrol slim system-config-printer tilix tor vim-gtk3 wine xinit
-
-echo $'#!/bin/sh \nexec dbus-launch nscde' > /home/$SUDO_USER/.xinitrc
-chown $SUDO_USER:$SUDO_USER /home/$USER/.xinitrc
-
-# installing drivers
-apt -y install bluez-firmware firmware-atheros firmware-bnx2* firmware-iwlwifi firmware-libertas \
-firmware-linux firmware-linux-nonfree firmware-ralink firmware-realtek
-
-echo 'Does your PC have a touchpad? [Y/n]
-read touchpad
-case $touchpad in
-  Y | y | u | Yes | yes ) apt -y install xserver-xorg-input-synaptics
-  ;;
-  N | n | No | no ) exit 0
-  ;;
-  * ) exit 0 && echo "Abort."
-  ;;
-esac
-
+apt -y install at-spi2-core chrome-gnome-shell clementine cutecom doublecmd-gtk doublecmd-plugins \
+file-roller filezilla firefox-esr firefox-esr-l10n-ru fonts-ibm-plex fonts-noto-cjk-extra gdm3 \
+gnome-screenshot gnome-session gnome-session-canberra gnome-sushi gnome-terminal gnome-tweaks \
+gnome-user-docs gstreamer1.0-gtk3 htop libreoffice-calc libglx-mesa0 libreoffice-gnome \
+libreoffice-gtk3 libreoffice-impress libreoffice-l10n-ru libreoffice-writer macchanger \
+mactelnet-client mpv mtr nautilus-admin nautilus-extension-gnome-terminal nautilus-sendto \
+nautilus-share nautilus-wipe network-manager-l2tp-gnome network-manager-openconnect-gnome \
+network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-ssh-gnome \
+network-manager-strongswan pavucontrol pwgen qbittorrent qpdfview qpdfview-djvu-plugin \
+qpdfview-ps-plugin qt5-style-plugins rar sipcalc tcpdump thunderbird thunderbird-l10n-ru \
+ttf-mscorefonts-installer ttf-unifont uance unrar unzip vim-gtk3 vlc vlc-plugin-notify \
+vlc-plugin-samba vlc-plugin-video-splitter wireshark-gtk xdg-utils xserver-xorg \
+xserver-xorg-input-libinput xserver-xorg-video-ati xserver-xorg-video-vesa zip

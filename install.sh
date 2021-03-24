@@ -17,11 +17,14 @@ gnome-control-center gnome-online-accounts gnome-screenshot gnome-session gnome-
 gnome-sushi gnome-terminal gnome-tweaks gnome-user-docs gstreamer1.0-pulseaudio gtkam-gimp htop \
 iptables-persistent libcanberra-pulse libglx-mesa0 libreoffice-calc libreoffice-gnome \
 libreoffice-gtk3 libreoffice-impress libreoffice-l10n-ru libreoffice-writer macchanger \
-mactelnet-client mpv mtr nautilus-admin nautilus-extension-gnome-terminal nautilus-sendto \
-nautilus-share nautilus-wipe network-manager-l2tp-gnome network-manager-openconnect-gnome \
-network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-ssh-gnome pavucontrol \
-printer-driver-all printer-driver-cups-pdf pulseaudio pulseaudio-module-bluetooth \
-pulseaudio-module-gsettings pwgen qbittorrent qpdfview qpdfview-djvu-plugin qpdfview-ps-plugin \
-qt5-style-plugins rar rtkit sipcalc speedcrunch tcpdump thunderbird thunderbird-l10n-ru \
-ttf-mscorefonts-installer ttf-unifont unace unrar unzip vim-gtk3 wireshark-gtk xdg-utils \
-xserver-xorg xserver-xorg-input-libinput xserver-xorg-video-ati xserver-xorg-video-vesa zip
+mactelnet-client mesa-vdpau-drivers mpv mtr nautilus-admin nautilus-extension-gnome-terminal \
+nautilus-sendto nautilus-share nautilus-wipe network-manager-l2tp-gnome \
+network-manager-openconnect-gnome network-manager-openvpn-gnome network-manager-pptp-gnome \
+network-manager-ssh-gnome pavucontrol printer-driver-all printer-driver-cups-pdf pulseaudio \
+pulseaudio-module-bluetooth pulseaudio-module-gsettings pwgen qbittorrent qpdfview \
+qpdfview-djvu-plugin qpdfview-ps-plugin qt5-style-plugins rar rtkit sipcalc speedcrunch tcpdump \
+thunderbird thunderbird-l10n-ru ttf-mscorefonts-installer ttf-unifont unace unrar unzip vim-gtk3 \
+wireshark-gtk xdg-utils xserver-xorg xserver-xorg-input-libinput xserver-xorg-video-ati \
+xserver-xorg-video-vesa zip
+
+apt clean
